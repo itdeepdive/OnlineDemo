@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+	<title>   Online Demo - Tabs</title>
+	<link rel="stylesheet" href="Styles/common.css">
+	<link rel="stylesheet" href="Styles/tabs.css">
+	<link rel="stylesheet" href="Styles/Kendo/kendo.common-material.css">
+	<link rel="stylesheet" href="Styles/Kendo/kendo.material.css">
+	<link rel="stylesheet" href="Styles/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="Styles/bootstrap/bootstrap-theme.css">
+</head>
+<body>
+
+	<div id="header">
+
+		<div id="logoutButton"></div>
+		<div id="rightText">
+			<div class="topText">
+				   Online
+			</div>
+			<div class="bottomText">
+				Your compliance center
+			</div>
+		</div>
+	</div>
+
+	<div id="navTabsHeader">
+		<div id="leftArrow"></div>
+		<div id="tabListContentScroll">
+			<div id="tabListContent">
+				<ul class="nav nav-tabs" role="tablist" id="tabList"></ul>
+			</div>
+		</div>
+		<div id="rightArrow"></div>
+	</div>
+
+	<div id="tabsModal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div id="closeModalButton"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tab-content" id="tabContent"></div>
+
+	<!--DATA-->
+	<script type="text/javascript" src="Scripts/data-tiles.js"></script>
+
+	<!--SCRIPTS-->
+	<script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Scripts/Kendo/kendo.all.js"></script>
+	<script type="text/javascript" src="Scripts/Kendo/kendo.culture.en-US.js"></script>
+	<script type="text/javascript" src="Scripts/Kendo/kendo.messages.en-US.js"></script>
+	<!--<script type="text/javascript" src="Scripts/headerNavigation.js"></script>-->
+	<script type="text/javascript" src="Scripts/common.js"></script>
+	<script type="text/javascript" src="Scripts/tabs.js"></script>
+</body>
+</html>

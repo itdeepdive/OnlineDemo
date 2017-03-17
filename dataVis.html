@@ -1,0 +1,127 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Data visualization</title>
+	<link rel="stylesheet" href="Styles/common.css">
+	<link rel="stylesheet" href="Styles/headerNavigation.css">
+	<link rel="stylesheet" href="Styles/intro.css">
+	<link rel="stylesheet" href="Styles/slideshow.css">
+	<link rel="stylesheet" href="Styles/Kendo/kendo.common-material.css">
+	<link rel="stylesheet" href="Styles/Kendo/kendo.material.css">
+	<link rel="stylesheet" href="Styles/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="Styles/bootstrap/bootstrap-theme.css">
+</head>
+<body>
+	<div id="header">
+		<div id="menuButton"></div>
+		<div id="menuLogo"></div>
+		<div id="logoutButton"></div>
+		<div id="rightText">
+			<div class="topText">
+				NSF Online
+			</div>
+			<div class="bottomText">
+				Your compliance center
+			</div>
+		</div>
+	</div>
+	<div id="navigation">
+		<a id="leftNavigation">
+			<div class="leftArrow"></div>
+			<div class="leftText"></div>
+		</a>
+		<a id="rightNavigation">
+			<div class="rightArrow"></div>
+			<div class="rightText"></div>
+		</a>
+	</div>
+	<div id="content">
+		<div id="slideshowTitle" data-bind="with: currSlideshow">
+			<h3 data-bind="text: $data.title"></h3>
+		</div>
+		<div class="slideshowImage" data-bind="with: currSlideshow">
+			<span class="helper"></span>
+			<img data-bind="attr:{src: $data.pictureUrl}" width="1000" />
+		</div>
+		<div id="slideshowText">
+			<div id="textTitle" data-bind="with: currSlideshow">
+				<h3 data-bind="text: $data.textTitle"></h3>
+			</div>
+			<div id="textContent" data-bind="with: currSlideshow">
+				<p data-bind="text: $data.text"></p>
+			</div>
+			<div id="navButtons">
+				<div id="leftNav"></div>
+				<div id="rightNav"></div>
+			</div>
+		</div>
+		<div id="slideshowNavigation">
+			<div id="playPauseButton" class="play"></div>
+			<div id="showSlideFullScreen">				
+			</div>
+			<div id="slideshowLine">
+			</div>
+		</div>
+	</div>
+
+	<div id="tabsModal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div id="navTabsHeader">
+						<div id="closeModalButton" class="closeModalButton"></div>
+						<div id="leftArrow"></div>
+						<div id="tabListContentScroll">
+							<div id="tabListContent">
+								<ul class="nav nav-tabs" role="tablist" id="tabList"></ul>
+							</div>
+						</div>
+						<div id="rightArrow"></div>
+					</div>
+					<div class="tab-content" id="tabContent"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="slideFullScreenModal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">				
+				<div class="closeModalButton"></div>
+				<div class="modal-body" data-bind="with: currSlideshow">
+					<h3 data-bind="text: $data.title"></h3>
+
+					<div class="slideshowImage">
+						<span class="helper"></span>
+						<img data-bind="attr:{src: $data.pictureUrl}" width="1000" />
+					</div>					
+				</div>
+				<div class="slideshowNavigation">
+					<div class="playPauseButton play"></div>
+
+					<div class="slideshowLine">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-----DATA----->
+	<script type="text/javascript" src="Scripts/data-tiles.js"></script>
+	<script type="text/javascript" src="Scripts/data-slideshow/dataVis.js"></script>
+	<!-------------->
+
+	<!--SCRIPTS-->
+	<script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Scripts/Kendo/kendo.all.js"></script>
+	<script type="text/javascript" src="Scripts/Kendo/kendo.culture.en-US.js"></script>
+	<script type="text/javascript" src="Scripts/Kendo/kendo.messages.en-US.js"></script>
+	<script type="text/javascript" src="Scripts/knockout-3.4.1.js"></script>
+	<script type="text/javascript" src="Scripts/common.js"></script>
+	<script type="text/javascript" src="Scripts/intro.js"></script>
+	<script type="text/javascript" src="Scripts/timer.js"></script>
+	<script type="text/javascript" src="Scripts/headerNavigation.js"></script>
+	<script type="text/javascript" src="Scripts/slideshow.js"></script>
+</body>
+</html>
