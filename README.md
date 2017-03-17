@@ -1,5 +1,6 @@
 # OnlineDemo
-A simple marketing public portal 
+A simple marketing public portal.
+
 Steps to run the project:-
 - Open login.html , clicking on the login button takes you into the application .
 - Use the hamburger menu to navigate across the tiles.
